@@ -1,5 +1,6 @@
 import { Grid, Row, Col } from 'react-bootstrap';
 import React, {Component} from 'react';
+import Navmenu from '../nav/navbar';
 import Carousel from './carousel';
 import Content from './content';
 import Sidemenu from './sidemenu';
@@ -32,6 +33,7 @@ class Homepage extends Component {
         <Row>
           <Col style={styles.col} xs={12}><Carousel /></Col>
         </Row>
+        <Row><Col xs={12}><Navmenu /></Col></Row> 
         <Row style={styles.row}>
           <Col xs={8}><Content /></Col>
           <Col xs={4}><Sidemenu /></Col>
