@@ -11,7 +11,7 @@ class Navmenu extends Component{
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#home">K-Blog</a>
+            <a href="/home">K-Blog</a>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
