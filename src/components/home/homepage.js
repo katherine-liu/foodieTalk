@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Navmenu from '../nav/navbar';
 import Carousel from './carousel';
 import Content from './content';
-import Sidemenu from './sidemenu';
 
 class Homepage extends Component {
   constructor(props) {
@@ -20,8 +19,7 @@ class Homepage extends Component {
       },
       row: {
         marginLeft: 0,
-        marginRight: 0,
-        marginTop: 25
+        marginRight: 0
       },
       col: {
         paddingLeft: 0,
@@ -29,16 +27,13 @@ class Homepage extends Component {
       }
     };
     return(
-      <Grid fluid={true} style={styles.grid}>
-        <Row>
-          <Col style={styles.col} xs={12}><Carousel /></Col>
-        </Row>
-        <Row><Col xs={12}><Navmenu /></Col></Row> 
-        <Row style={styles.row}>
-          <Col xs={8}><Content /></Col>
-          <Col xs={4}><Sidemenu /></Col>
-        </Row>
-      </Grid>
+      <div>
+        <Grid fluid={true} style={styles.grid}>
+          <Row><Col style={styles.col} xs={12}><Carousel /></Col></Row>
+          <Row><Col xs={12}><Navmenu /></Col></Row>
+        </Grid>
+        <Content />
+      </div>
     )
   }
 }

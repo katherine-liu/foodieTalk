@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 import Homepage from './components/home/homepage';
+import NewBlog from './components/newBlog/new';
 
 class App extends Component {
   constructor(props) {
@@ -43,9 +45,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Homepage />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/home' component={Homepage} />
+          <Route path='/newBlog' component={NewBlog} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
